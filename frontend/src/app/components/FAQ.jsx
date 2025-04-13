@@ -20,7 +20,7 @@ export default function FAQ() {
 
           <dl className="mt-16 divide-y divide-gray-900/10 grid grid-cols-2 gap-y-0 gap-x-12">
             {faqs.map((faq, index) => (
-              <div key={faq.id} className="py-2 first:pt-0 last:pb-0">
+              <div key={faq.id} className="py-2 first:pt-0 last:pb-0 mt-2">
                 <dt>
                   <button
                     type="button"

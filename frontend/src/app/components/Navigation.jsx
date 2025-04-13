@@ -5,7 +5,7 @@ export default function Navigation() {
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
-        <a href="#" className="-m-1.5 p-1.5">
+        <a href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
           <img className="h-24 w-auto" src="logo.svg" alt=""></img>
         </a>
@@ -33,7 +33,7 @@ export default function Navigation() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-8">
-          <a href="/#nega" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/nega" className="text-sm/6 font-semibold text-gray-900">
             Nega
           </a>
           <a href="/#kreme-za-nego" className="text-sm/6 font-semibold text-gray-900">
