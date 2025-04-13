@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
-import { fetchCollection } from '../lib/pocketbase';
+"use client";
+
+import { useState, useEffect } from "react";
+import { fetchCollection } from "../lib/pocketbase";
 
 export default function usePocketBase(collectionName) {
   const [data, setData] = useState([]);
