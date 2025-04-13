@@ -1,6 +1,6 @@
 export default function Navigation() {
   return (
-    <header className="bg-white">
+    <header>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -32,29 +32,29 @@ export default function Navigation() {
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+        <div className="hidden lg:flex lg:gap-x-8">
+          <a href="/#nega" className="text-sm/6 font-semibold text-gray-900">
             Nega
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/#kreme-za-nego" className="text-sm/6 font-semibold text-gray-900">
             Kreme za nego
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/#dodatni-napoki" className="text-sm/6 font-semibold text-gray-900">
             Dodatni napoki
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/#pogosta-vprasanja" className="text-sm/6 font-semibold text-gray-900">
             Pogosta vprašanja
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/#darilni-boni" className="text-sm/6 font-semibold text-gray-900">
             Darilni boni
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/#o-meni" className="text-sm/6 font-semibold text-gray-900">
             O meni
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/portfolio" className="text-sm/6 font-semibold text-gray-900">
             Portfolio
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="/#kontakt" className="text-sm/6 font-semibold text-gray-900">
             Kontakt
           </a>
         </div>

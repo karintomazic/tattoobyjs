@@ -1,6 +1,6 @@
 export default function Kontakt() {
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="kontakt">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl mb-4">
           Kontakt

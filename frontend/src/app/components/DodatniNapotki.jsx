@@ -1,31 +1,12 @@
 "use client";
 import usePocketBase from "@/hooks/usePocketBase";
-
-function preprocessRichText(content, svgIcon) {
-  return content
-    .replace(/<li>/g, `<li class="flex gap-x-3">${svgIcon}<span>`)
-    .replace(/<\/li>/g, `</span></li>`);
-}
+import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 
 export default function DodatniNapotki() {
   const items = usePocketBase("dodatni_napotki");
-  const svgIcon = `
-  <svg
-    class="mt-1 w-5 h-5 flex-none text-[#FF6F61]"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-    aria-hidden="true"
-  >
-    <path
-      fill-rule="evenodd"
-      d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z"
-      clip-rule="evenodd"
-    />
-  </svg>
-`;
 
   return (
-    <div className="relative isolate overflow-hidden bg-white px-6 pt-24 sm:pt-32 lg:overflow-visible lg:px-0">
+    <div className="relative isolate overflow-hidden bg-white px-6 pt-24 sm:pt-32 lg:overflow-visible lg:px-0" id="dodatni-napoki">
       {items.map((item) => (
         <div key={item.id}>
           <div className="absolute inset-0 -z-10 overflow-hidden">
