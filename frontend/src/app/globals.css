@@ -26,24 +26,24 @@ body {
 }
 
 
-ul {
+.e-rte-content ul {
   margin-top: 2rem;
   max-width: 36rem;
 }
 
-li {
+.e-rte-content li {
   display: flex;
   gap: .75rem;
   margin-bottom: 2rem;
 }
 
-li svg {
+.e-rte-content li svg {
   margin-top: .25rem;
   width: 1.25rem;
   height: auto;
 }
 
-li span {
+.e-rte-content li span {
   color: #4b5563;
 }
 

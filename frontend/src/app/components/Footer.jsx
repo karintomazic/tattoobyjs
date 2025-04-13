@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center gap-x-6 md:order-2">
-          <a href="#" className="text-gray-600 hover:text-gray-800">
+          <a href="https://www.facebook.com/p/Tattoo-Studio-by-JS-61552365441517/" target="_blank" className="text-gray-600 hover:text-gray-800">
             <span className="sr-only">Facebook</span>
             <svg
               className="size-6"
@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
+          <a href="https://www.instagram.com/tattoosbyjs/" target="_blank" className="text-gray-600 hover:text-gray-800">
             <span className="sr-only">Instagram</span>
             <svg
               className="size-6"

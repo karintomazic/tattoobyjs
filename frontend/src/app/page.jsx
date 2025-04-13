@@ -5,17 +5,19 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Kontakt from "./components/Kontakt";
 import Nasveti from "./components/Nasveti";
+import AboutMe from "./components/AboutMe";
 
 export default function Home() {
   return (
     <>
       <Navigation />
       <Hero />
+      <AboutMe />
       <DodatniNapotki />
-      <FAQ />
       <Nasveti />
+      <FAQ />
       <Kontakt />
       <Footer />
-      </>
+    </>
   );
 }
