@@ -25,7 +25,7 @@ export default function Hero() {
                 <div className="my-10 flex items-center justify-center gap-x-6">
                   <a
                     href="/portfolio"
-                    className="rounded-md bg-[#FF6F61] px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-[#FF6F61] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF6F61]"
+                    className="rounded-md bg-[#FF6F61] px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-[#FF6F61] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#FF6F61]"
                   >
                     Portfolio
                   </a>

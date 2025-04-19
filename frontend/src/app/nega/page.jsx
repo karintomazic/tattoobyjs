@@ -26,13 +26,28 @@ export default function Nega() {
                 <div
                   className="e-rte-content mt-8 space-y-8 text-gray-600"
                   dangerouslySetInnerHTML={{
-                    __html: preprocessRichText(item.content, svgIcon),
+                    __html: preprocessRichText(item.content1, svgIcon),
                   }}
                 />
               </div>
-              <figure className="mt-16">
+              <figure className="mt-12">
                 <img
-                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}`}
+                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}`}
+                  alt="Hero Image"
+                  className="aspect-video rounded-xl bg-gray-50 object-cover"
+                />
+              </figure>
+              <div className="mt-10 ">
+                <div
+                  className="e-rte-content mt-8 space-y-8 text-gray-600"
+                  dangerouslySetInnerHTML={{
+                    __html: preprocessRichText(item.content2, svgIcon),
+                  }}
+                />
+              </div>
+              <figure>
+                <img
+                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}`}
                   alt="Hero Image"
                   className="aspect-video rounded-xl bg-gray-50 object-cover"
                 />
@@ -41,7 +56,7 @@ export default function Nega() {
                 <div
                   className="e-rte-content mt-8 space-y-8 text-gray-600"
                   dangerouslySetInnerHTML={{
-                    __html: preprocessRichText(item.content2, svgIcon),
+                    __html: preprocessRichText(item.content3, svgIcon),
                   }}
                 />
               </div>

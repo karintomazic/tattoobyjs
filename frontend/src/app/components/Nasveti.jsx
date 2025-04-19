@@ -5,7 +5,7 @@ import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 export default function Nasveti() {
   const items = usePocketBase("nasveti");
   return (
-    <div className="bg-white py-24 sm:py-32" id="nasveti">
+    <div className="px-6 pt-24 sm:pt-32" id="nasveti">
       {items.map((item) => (
         <div key={item.id}>
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -24,9 +24,9 @@ export default function Nasveti() {
                   <p className="text-base/7 font-semibold text-[#FF6F61]">
                     {item.subtitle}
                   </p>
-                  <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <h2 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                     {item.title}
-                  </h1>
+                  </h2>
                   <div
                     className="e-rte-content mt-8 max-w-xl space-y-8 text-gray-600"
                     dangerouslySetInnerHTML={{

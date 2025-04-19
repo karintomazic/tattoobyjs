@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState } from "react";
 import usePocketBase from "@/hooks/usePocketBase";
 
 export default function FAQ() {
@@ -12,10 +12,13 @@ export default function FAQ() {
 
   return (
     <div className="bg-white" id="pogosta-vprasanja">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+      <div className="mx-auto max-w-7xl px-8 sm:py-32 lg:px-8 lg:py-40 pt-24 sm:pt-32">
         <div className="mx-auto">
-          <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            Pogosta vprašanja in kaj moramo vedeti pred tetoviranjem?
+          <p className="text-base/7 font-semibold text-[#FF6F61]">
+            kaj moramo vedeti pred tetoviranjem?
+          </p>
+          <h2 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            Pogosta vprašanja
           </h2>
 
           <dl className="mt-16 divide-y divide-gray-900/10 grid grid-cols-2 gap-y-0 gap-x-12">
@@ -29,11 +32,13 @@ export default function FAQ() {
                     aria-expanded={activeIndex === index}
                     aria-controls={`faq-${index}`}
                   >
-                    <span className="text-base/7 font-semibold cursor-pointer">{faq.question}</span>
+                    <span className="text-base/7 font-semibold cursor-pointer">
+                      {faq.question}
+                    </span>
                     <span className="ml-6 flex h-7 items-center">
                       <svg
                         className={`size-6 transform transition-transform ${
-                          activeIndex === index ? 'rotate-180' : ''
+                          activeIndex === index ? "rotate-180" : ""
                         }`}
                         fill="none"
                         viewBox="0 0 24 24"
@@ -53,7 +58,9 @@ export default function FAQ() {
                 <dd
                   id={`faq-${index}`}
                   className={`mt-2 pr-12 overflow-hidden transition-all duration-300 ${
-                    activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    activeIndex === index
+                      ? "max-h-96 opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
                   <div

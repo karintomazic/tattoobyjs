@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Kontakt from "./components/Kontakt";
 import Nasveti from "./components/Nasveti";
 import AboutMe from "./components/AboutMe";
+import DarilniBoni from "./components/DarilniBoni";
 
 export default function Home() {
   return (
@@ -13,8 +14,9 @@ export default function Home() {
       <Navigation />
       <Hero />
       <AboutMe />
-      <DodatniNapotki />
       <Nasveti />
+      <DodatniNapotki />
+      <DarilniBoni />
       <FAQ />
       <Kontakt />
       <Footer />
