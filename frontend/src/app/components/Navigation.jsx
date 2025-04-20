@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/nega", label: "Nega" },
@@ -16,12 +16,12 @@ const navLinks = [
 
 function DesktopNav() {
   return (
-    <div className="hidden lg:flex lg:gap-x-8">
+    <div className="hidden lg:flex lg:gap-x-6">
       {navLinks.map((link) => (
         <a
           key={link.href}
           href={link.href}
-          className="text-sm/6 font-semibold text-gray-900 border-b border-transparent hover:border-[#FF6F61] transition-colors"
+          className="text-sm/6 font-semibold text-gray-900 border-transparent hover:border-[#FF6F61] transition-colors border-b-[2.5px]"
         >
           {link.label}
         </a>
@@ -90,47 +90,59 @@ function MobileNav({ isOpen, toggleMenu }) {
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
 
   const toggleMenu = () => setIsOpen((open) => !open);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY === 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    // Run on mount in case page is not at top
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header>
-      <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-8 lg:px-8"
-        aria-label="Global"
-      >
-        <a href="/" className="-m-1.5 p-1.5">
-          <span className="sr-only">Your Company</span>
-          <img className="h-24 w-auto" src="logo.svg" alt="" />
-        </a>
-        {/* Hamburger button */}
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[#000]"
-            onClick={toggleMenu}
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-[50px] h-[50px] size-6 lg:size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-              data-slot="icon"
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${!isAtTop ? "shadow-md" : ""}`}>
+        <nav
+          className="mx-auto flex max-w-7xl items-center justify-between p-8 lg:px-8"
+          aria-label="Global"
+        >
+          <a href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Your Company</span>
+            <img className="h-24 w-auto" src="logo.svg" alt="" />
+          </a>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[#000]"
+              onClick={toggleMenu}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <DesktopNav />
-      </nav>
-      <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} />
-    </header>
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-[50px] h-[50px] size-6 lg:size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <DesktopNav />
+        </nav>
+        <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} />
+      </header>
+    </>
   );
 }
