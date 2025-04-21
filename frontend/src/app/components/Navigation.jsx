@@ -75,7 +75,7 @@ function MobileNav({ isOpen, toggleMenu }) {
                   key={link.href}
                   href={link.href}
                   className="-mx-3 block rounded-lg px-3 py-2 text-[1.5rem] font-semibold text-gray-900 hover:bg-gray-50"
-                  onClick={toggleMenu} // Closes menu on link click
+                  onClick={toggleMenu}
                 >
                   {link.label}
                 </a>

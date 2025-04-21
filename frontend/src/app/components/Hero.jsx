@@ -13,7 +13,7 @@ export default function Hero() {
             className="absolute inset-0 -z-10 size-full object-cover"
           ></img>
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-12">
+            <div className="mx-auto max-w-2xl py-20 sm:py-12 lg:py-12">
               <div className="text-center">
                 <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
                   {item.heading1}
