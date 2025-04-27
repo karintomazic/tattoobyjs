@@ -11,7 +11,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="bg-white" id="pogosta-vprasanja">
+    <div id="pogosta-vprasanja">
       <div className="mx-auto max-w-7xl px-8 sm:py-32 lg:px-8 lg:py-40 pt-24 sm:pt-32">
         <div className="mx-auto">
           <p className="text-base/7 font-semibold text-[#FF6F61]">

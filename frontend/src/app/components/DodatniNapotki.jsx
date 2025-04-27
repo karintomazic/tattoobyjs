@@ -6,7 +6,7 @@ export default function DodatniNapotki() {
   const items = usePocketBase("dodatni_napotki");
 
   return (
-    <div className="relative isolate overflow-hidden bg-white px-6 pt-24 sm:pt-32 lg:overflow-visible lg:px-0" id="dodatni-napoki">
+    <div className="relative isolate overflow-hidden  px-6 pt-24 sm:pt-32 lg:overflow-visible lg:px-0" id="dodatni-napoki">
       {items.map((item) => (
         <div key={item.id}>
           <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -57,7 +57,7 @@ export default function DodatniNapotki() {
             <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
               <img
                 className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 lg:w-[37rem]"
-                src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}`}
+                src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
                 alt="Hero Image"
               ></img>
             </div>

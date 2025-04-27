@@ -108,12 +108,12 @@ export default function Navigation() {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${!isAtTop ? "shadow-md" : ""}`}>
         <nav
-          className="mx-auto flex max-w-7xl items-center justify-between p-8 lg:px-8"
+          className={`mx-auto flex max-w-7xl items-center justify-between ${!isAtTop ? "p-4" : "p-8 lg:px-8"}`}
           aria-label="Global"
         >
           <a href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img className="h-24 w-auto" src="logo.svg" alt="" />
+            <span className="sr-only">Tattoo by js</span>
+            <img className={`w-auto transition-height duration-200 ${!isAtTop ? "h-14" : "h-24"}`} src="logo.svg" alt="" />
           </a>
           <div className="flex lg:hidden">
             <button
@@ -123,7 +123,7 @@ export default function Navigation() {
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="w-[50px] h-[50px] size-6 lg:size-6"
+                className={`size-6 lg:size-6 ${!isAtTop ? "w-[25px] h-[25px]" : "w-[50px] h-[50px]"}`}
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"

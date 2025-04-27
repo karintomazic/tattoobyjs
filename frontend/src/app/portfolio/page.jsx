@@ -36,7 +36,7 @@ export default function Portfolio() {
             {items.map((item, index) => (
               <img
                 key={index}
-                src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}`}
+                src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
                 alt={`Tattoo ${index + 1}`}
                 className="w-full rounded-lg shadow-md"
               />

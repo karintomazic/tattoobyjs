@@ -8,7 +8,7 @@ export default function Hero() {
       {items.map((item) => (
         <div key={item.id}>
           <img
-            src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.hero_image}`}
+            src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.hero_image}?thumb=2048x0`}
             alt="Hero Image"
             className="absolute inset-0 -z-10 size-full object-cover"
           ></img>

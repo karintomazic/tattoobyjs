@@ -13,7 +13,7 @@ export default function Nasveti() {
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 p-64 pb-[35rem] shadow-2xl ">
                 <img
                   className="absolute inset-0 size-full object-cover brightness-125 saturate-0"
-                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}`}
+                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
                   alt="Hero Image"
                 ></img>
               </div>

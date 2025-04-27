@@ -13,7 +13,7 @@ export default function Nega() {
       <Navigation />
       {items.map((item) => (
         <div key={item.id} className="divide-y divide-gray-100">
-          <div className="bg-white px-6 py-12 lg:px-8">
+          <div className=" px-6 py-12 lg:px-8">
             <div className="mx-auto max-w-3xl text-base/7 text-gray-700">
               <p className="text-base/7 font-semibold text-[#FF6F61]">
                 {item.subtitle}
@@ -32,7 +32,7 @@ export default function Nega() {
               </div>
               <figure className="mt-12">
                 <img
-                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}`}
+                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
                   alt="Hero Image"
                   className="aspect-video rounded-xl bg-gray-50 object-cover"
                 />
@@ -47,7 +47,7 @@ export default function Nega() {
               </div>
               <figure>
                 <img
-                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}`}
+                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
                   alt="Hero Image"
                   className="aspect-video rounded-xl bg-gray-50 object-cover"
                 />

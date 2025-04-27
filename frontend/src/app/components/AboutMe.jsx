@@ -30,7 +30,7 @@ export default function AboutMe() {
                 <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                   <img
                     alt=""
-                    src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img3}`}
+                    src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img3}?thumb=1080x0`}
                     className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                   />
                 </div>
@@ -38,21 +38,21 @@ export default function AboutMe() {
                   <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                     <img
                       alt=""
-                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}`}
+                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
                       className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                     />
                   </div>
                   <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                     <img
                       alt=""
-                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img4}`}
+                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img4}?thumb=1080x0`}
                       className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                     />
                   </div>
                   <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                     <img
                       alt=""
-                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}`}
+                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
                       className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                     />
                   </div>
