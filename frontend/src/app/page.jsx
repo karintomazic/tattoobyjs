@@ -7,6 +7,7 @@ import Kontakt from "./components/Kontakt";
 import Nasveti from "./components/Nasveti";
 import AboutMe from "./components/AboutMe";
 import DarilniBoni from "./components/DarilniBoni";
+import Merch from "./components/Merch";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <DodatniNapotki />
       <DarilniBoni />
       <FAQ />
+      <Merch/>
       <Kontakt />
       <Footer />
     </>

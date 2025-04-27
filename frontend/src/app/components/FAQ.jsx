@@ -12,9 +12,9 @@ export default function FAQ() {
 
   return (
     <div id="pogosta-vprasanja">
-      <div className="mx-auto max-w-7xl px-8 sm:py-32 lg:px-8 lg:py-40 pt-24 sm:pt-32">
+      <div className="mx-auto max-w-7xl px-8 py-24">
         <div className="mx-auto">
-          <p className="text-base/7 font-semibold text-[#FF6F61]">
+          <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
             kaj moramo vedeti pred tetoviranjem?
           </p>
           <h2 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">

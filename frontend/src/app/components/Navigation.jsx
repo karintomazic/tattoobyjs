@@ -3,21 +3,36 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { href: "/nega", label: "Nega" },
-  { href: "/#kreme-za-nego", label: "Kreme za nego" },
-  { href: "/#dodatni-napoki", label: "Dodatni napoki" },
-  { href: "/#nasveti", label: "Nasveti" },
-  { href: "/#pogosta-vprasanja", label: "Pogosta vprašanja" },
-  { href: "/#darilni-boni", label: "Darilni boni" },
   { href: "/#o-meni", label: "O meni" },
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/#nasveti", label: "Nasveti" },
+  { href: "/#dodatni-napoki", label: "Dodatni napoki" },
+  { href: "/#darilni-boni", label: "Darilni boni" },
+  { href: "/#pogosta-vprasanja", label: "Pogosta vprašanja" },
+  { href: "/#merch", label: "Merch" },
   { href: "/#kontakt", label: "Kontakt" },
+];
+
+const navLinks2 = [
+  { href: "/nega", label: "Nega" },
+  { href: "/kreme-za-nego", label: "Kreme za nego" },
+  { href: "/portfolio", label: "Portfolio" },
 ];
 
 function DesktopNav() {
   return (
     <div className="hidden lg:flex lg:gap-x-6">
       {navLinks.map((link) => (
+        <a
+          key={link.href}
+          href={link.href}
+          className="text-sm/6 font-semibold text-gray-900 border-transparent hover:border-[#FF6F61] transition-colors border-b-[2.5px]"
+        >
+          {link.label}
+        </a>
+      ))}
+      <div className="h-8 w-px bg-gray-300 mx-4" />
+
+      {navLinks2.map((link) => (
         <a
           key={link.href}
           href={link.href}
@@ -98,22 +113,34 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsAtTop(window.scrollY === 0);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     // Run on mount in case page is not at top
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${!isAtTop ? "shadow-md" : ""}`}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
+          !isAtTop ? "shadow-md" : ""
+        }`}
+      >
         <nav
-          className={`mx-auto flex max-w-7xl items-center justify-between ${!isAtTop ? "p-4" : "p-8 lg:px-8"}`}
+          className={`mx-auto flex max-w-7xl items-center justify-between ${
+            !isAtTop ? "p-4" : "p-8 lg:px-8"
+          }`}
           aria-label="Global"
         >
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Tattoo by js</span>
-            <img className={`w-auto transition-height duration-200 ${!isAtTop ? "h-14" : "h-24"}`} src="logo.svg" alt="" />
+            <img
+              className={`w-auto transition-height duration-200 ${
+                !isAtTop ? "h-14" : "h-24"
+              }`}
+              src="logo.svg"
+              alt=""
+            />
           </a>
           <div className="flex lg:hidden">
             <button
@@ -123,7 +150,9 @@ export default function Navigation() {
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className={`size-6 lg:size-6 ${!isAtTop ? "w-[25px] h-[25px]" : "w-[50px] h-[50px]"}`}
+                className={`size-6 lg:size-6 ${
+                  !isAtTop ? "w-[25px] h-[25px]" : "w-[50px] h-[50px]"
+                }`}
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"

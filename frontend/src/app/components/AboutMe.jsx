@@ -8,57 +8,82 @@ export default function AboutMe() {
   return (
     <div id="o-meni">
       {items.map((item) => (
-        <div key={item.id} className="mt-12 overflow-hidden sm:mt-20">
-          <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
-              <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-                <p className="text-base/7 font-semibold text-[#FF6F61]">
-                  {item.subtitle}
-                </p>
-                <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  {item.title}
-                </h2>
-                <p className="mt-6 text-xl/8 text-gray-600">{item.text}</p>
+        <div key={item.id} className="overflow-hidden bg-white py-24 sm:py-32">
+          <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+            <div className="max-w-4xl">
+              <p className="text-base/7 font-semibold text-[#FF6F61]">
+                {item.subtitle}
+              </p>
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                {item.title}
+              </h1>
+              <p className="mt-6 text-balance text-xl/8 text-gray-700">
+                {item.text}
+              </p>
+            </div>
+            <section className="mt-10 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
+              <div className="lg:pr-8">
                 <div
-                  className="mt-6 text-base/7 text-gray-600 italic"
+                  className="mt-6 text-base/7 text-gray-600"
                   dangerouslySetInnerHTML={{
                     __html: preprocessRichText(item.content, svgIcon),
                   }}
                 />
+
+                <div
+                  className="mt-8 text-base/7 text-gray-600"
+                  dangerouslySetInnerHTML={{
+                    __html: preprocessRichText(item.content2, svgIcon),
+                  }}
+                />
               </div>
-              <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-                <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-                  <img
-                    alt=""
-                    src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img3}?thumb=1080x0`}
-                    className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-                  />
-                </div>
-                <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
-                  <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
+              <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
+                <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
+                  <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+                    <img
+                      alt=""
+                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img3}?thumb=1080x0`}
+                      className="block size-full object-cover"
+                    />
+                  </div>
+                  <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
                     <img
                       alt=""
                       src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
-                      className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                      className="block size-full object-cover"
                     />
                   </div>
-                  <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+                  <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
                     <img
                       alt=""
                       src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img4}?thumb=1080x0`}
-                      className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                      className="block size-full object-cover"
                     />
                   </div>
-                  <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+                  <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
                     <img
                       alt=""
                       src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
-                      className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                      className="block size-full object-cover"
                     />
                   </div>
                 </div>
               </div>
-            </div>
+
+              <div className="max-lg:mt-16 lg:col-span-1">
+                <p className="text-base/7 font-semibold text-gray-500">
+                  Moji stili
+                </p>
+                <hr className="mt-6 border-t border-gray-200" />
+
+                <div
+                  className="mt-8 text-base/7 text-gray-600"
+                  dangerouslySetInnerHTML={{
+                    __html: preprocessRichText(item.content3, svgIcon),
+                  }}
+                />
+              </div>
+            </section>
           </div>
         </div>
       ))}

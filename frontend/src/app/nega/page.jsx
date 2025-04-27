@@ -15,7 +15,7 @@ export default function Nega() {
         <div key={item.id} className="divide-y divide-gray-100">
           <div className=" px-6 py-12 lg:px-8">
             <div className="mx-auto max-w-3xl text-base/7 text-gray-700">
-              <p className="text-base/7 font-semibold text-[#FF6F61]">
+              <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
                 {item.subtitle}
               </p>
               <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
