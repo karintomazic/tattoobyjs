@@ -95,6 +95,17 @@ function MobileNav({ isOpen, toggleMenu }) {
                   {link.label}
                 </a>
               ))}
+
+              {navLinks2.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-[1.5rem] font-semibold text-gray-900 hover:bg-gray-50"
+                  onClick={toggleMenu}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>

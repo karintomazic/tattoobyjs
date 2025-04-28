@@ -71,7 +71,7 @@ export default function AboutMe() {
               </div>
 
               <div className="max-lg:mt-16 lg:col-span-1">
-                <p className="text-base/7 font-semibold text-gray-500">
+                <p className="text-lg font-semibold text-gray-800">
                   Moji stili
                 </p>
                 <hr className="mt-6 border-t border-gray-200" />
