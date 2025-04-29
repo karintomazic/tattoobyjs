@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import GeneralContainer from "../blocks/GeneralContainer";
 
 export default function Kreme() {
   const items = usePocketBase("kreme_za_nego");
@@ -12,7 +13,7 @@ export default function Kreme() {
     <>
       <Navigation />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <GeneralContainer>
         <div className="max-w-4xl">
           <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
             Kreme za nego
@@ -51,7 +52,7 @@ export default function Kreme() {
             />
           </div>
         ))}
-      </div>
+      </GeneralContainer>
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import GeneralContainer from "../blocks/GeneralContainer";
 
 export default function Nega() {
   const items = usePocketBase("nega");
@@ -13,9 +14,9 @@ export default function Nega() {
       <Navigation />
       {items.map((item) => (
         <div key={item.id} className="divide-y divide-gray-100">
-          <div className=" px-6 py-12 lg:px-8">
-            <div className="mx-auto max-w-3xl text-base/7 text-gray-700">
-              <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
+          <GeneralContainer>
+            <div className="text-base/7 text-gray-700">
+              <p className="font-semibold text-[#FF6F61] mb-[0.8rem]">
                 {item.subtitle}
               </p>
               <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
@@ -34,7 +35,7 @@ export default function Nega() {
                 <img
                   src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
                   alt="Hero Image"
-                  className="aspect-video rounded-xl bg-gray-50 object-cover"
+                  className="aspect-video rounded-xl bg-gray-50 object-cover max-h-[500px] w-full"
                 />
               </figure>
               <div className="mt-10 ">
@@ -49,7 +50,7 @@ export default function Nega() {
                 <img
                   src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
                   alt="Hero Image"
-                  className="aspect-video rounded-xl bg-gray-50 object-cover"
+                  className="aspect-video rounded-xl bg-gray-50 object-cover max-h-[500px] w-full"
                 />
               </figure>
               <div className="mt-16 ">
@@ -61,7 +62,7 @@ export default function Nega() {
                 />
               </div>
             </div>
-          </div>
+          </GeneralContainer>
         </div>
       ))}
       <Footer />

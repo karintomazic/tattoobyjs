@@ -11,7 +11,7 @@ export default function Nasveti() {
         {items.map((item) => (
           <div
             key={item.id}
-            className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+            className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-2"
           >
             <div className="lg:pr-4 order-2 lg:order-1  lg:sticky top-4">
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 p-64 pb-[35rem] shadow-lg ">

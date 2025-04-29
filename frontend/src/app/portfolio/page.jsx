@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import dynamic from "next/dynamic";
 import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import GeneralContainer from "../blocks/GeneralContainer";
 
 const ResponsiveMasonry = dynamic(
   () => import("react-responsive-masonry").then((mod) => mod.ResponsiveMasonry),
@@ -23,7 +24,7 @@ export default function Portfolio() {
   return (
     <div>
       <Navigation />
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-8">
+      <GeneralContainer className="mx-auto max-w-7xl px-6 lg:px-8 mt-8">
         {itemsText.map((item, index) => (
           <div key={index} className="mb-12">
             <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
@@ -56,7 +57,7 @@ export default function Portfolio() {
             ))}
           </Masonry>
         </ResponsiveMasonry>
-      </div>
+      </GeneralContainer>
 
       <Footer />
     </div>

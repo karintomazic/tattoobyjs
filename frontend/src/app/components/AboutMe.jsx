@@ -10,7 +10,7 @@ export default function AboutMe() {
     <div id="o-meni">
       <GeneralContainer>
         {items.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className="mx-auto max-w-2xl lg:max-w-none">
             <div className="max-w-4xl">
               <p className="text-base/7 font-semibold text-[#FF6F61]">
                 {item.subtitle}
