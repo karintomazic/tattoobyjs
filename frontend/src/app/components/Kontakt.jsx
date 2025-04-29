@@ -1,7 +1,12 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faClock,
+  faEnvelope,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import GeneralContainer from "../blocks/GeneralContainer";
 
 function ContactCard({ title, icon, children, href }) {
   const CardContent = (
@@ -31,7 +36,7 @@ function ContactCard({ title, icon, children, href }) {
 export default function Kontakt() {
   return (
     <section id="kontakt">
-      <div className="mx-auto max-w-7xl py-24 px-6 lg:px-8">
+      <GeneralContainer>
         <h2 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl mb-4">
           Kontakt
         </h2>
@@ -45,10 +50,13 @@ export default function Kontakt() {
               <div>
                 <dt className="sr-only">Email</dt>
                 <dd>
-                  <p className="mb-2"><span className="font-bold">Imate vprašanje?</span> Ali se želite naročiti na termin</p>
+                  <p className="mb-2">
+                    <span className="font-bold">Imate vprašanje?</span> Ali se
+                    želite naročiti na termin
+                  </p>
                   <p className="font-bold">Pisite nam na:</p>
                   <span className="email text-[#FF6F61] font-semibold no-underline border-b pb-1 leading-8">
-                  tattoostudiobyjs@gmail.com
+                    tattoostudiobyjs@gmail.com
                   </span>
                 </dd>
               </div>
@@ -61,7 +69,10 @@ export default function Kontakt() {
               <div>
                 <dt className="sr-only">Lokacija</dt>
                 <dd>
-                  <p className="mb-2"><span className="font-bold">Tattoo studio by JS,</span> tetoviranje, Jernej Sirc s.p.</p>
+                  <p className="mb-2">
+                    <span className="font-bold">Tattoo studio by JS,</span>{" "}
+                    tetoviranje, Jernej Sirc s.p.
+                  </p>
                   <span className="font-semibold text-[#FF6F61] no-underline border-b pb-1 leading-8">
                     Ulica heroja Šaranoviča 27, 2000 Maribor
                   </span>
@@ -81,7 +92,7 @@ export default function Kontakt() {
             </ContactCard>
           </div>
         </div>
-      </div>
+      </GeneralContainer>
     </section>
   );
 }

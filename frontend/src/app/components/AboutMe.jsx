@@ -1,15 +1,16 @@
 "use client";
 import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import GeneralContainer from "../blocks/GeneralContainer";
 
 export default function AboutMe() {
   const items = usePocketBase("about");
 
   return (
     <div id="o-meni">
-      {items.map((item) => (
-        <div key={item.id} className="overflow-hidden bg-white py-24 sm:py-32">
-          <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+      <GeneralContainer>
+        {items.map((item) => (
+          <div key={item.id}>
             <div className="max-w-4xl">
               <p className="text-base/7 font-semibold text-[#FF6F61]">
                 {item.subtitle}
@@ -38,32 +39,18 @@ export default function AboutMe() {
                 />
               </div>
               <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-                <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
-                  <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+                <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-2 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
+                  <div className="aspect-[7/9] overflow-hidden rounded-xl shadow-xl outline -outline-offset-1 outline-black/10">
                     <img
                       alt=""
                       src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img3}?thumb=1080x0`}
                       className="block size-full object-cover"
                     />
                   </div>
-                  <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
+                  <div className="-mt-8 aspect-[7/9] overflow-hidden rounded-xl shadow-xl outline -outline-offset-1 outline-black/10 lg:-mt-40">
                     <img
                       alt=""
                       src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
-                      className="block size-full object-cover"
-                    />
-                  </div>
-                  <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
-                    <img
-                      alt=""
-                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img4}?thumb=1080x0`}
-                      className="block size-full object-cover"
-                    />
-                  </div>
-                  <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
-                    <img
-                      alt=""
-                      src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
                       className="block size-full object-cover"
                     />
                   </div>
@@ -85,8 +72,8 @@ export default function AboutMe() {
               </div>
             </section>
           </div>
-        </div>
-      ))}
+        ))}
+      </GeneralContainer>
     </div>
   );
 }

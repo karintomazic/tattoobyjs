@@ -1,14 +1,18 @@
 "use client";
 import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import GeneralContainer from "../blocks/GeneralContainer";
 
 export default function Nasveti() {
   const items = usePocketBase("nasveti");
   return (
-    <div className="px-6 py-24" id="nasveti">
-      {items.map((item) => (
-        <div key={item.id} className="mx-auto max-w-7xl lg:px-8">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+    <div id="nasveti">
+      <GeneralContainer>
+        {items.map((item) => (
+          <div
+            key={item.id}
+            className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+          >
             <div className="lg:pr-4 order-2 lg:order-1  lg:sticky top-4">
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 p-64 pb-[35rem] shadow-lg ">
                 <img
@@ -35,8 +39,8 @@ export default function Nasveti() {
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </GeneralContainer>
     </div>
   );
 }

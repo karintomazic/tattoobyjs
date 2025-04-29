@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import GeneralContainer from "../blocks/GeneralContainer";
 
 const settings = {
   dots: true,
@@ -26,8 +27,8 @@ export default function Merch() {
   }));
 
   return (
-    <div className="overflow-hidden py-24" id="merch">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div id="merch">
+      <GeneralContainer>
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 items-center">
           {items.map((item) => (
             <div key={item.id} className="lg:pr-4 lg:pt-4">
@@ -56,13 +57,18 @@ export default function Merch() {
           ))}
           <Slider {...settings}>
             {sliderImages.map((img, idx) => (
-              <div key={idx} >
-                <img className="max-h-[500px] object-cover rounded-xl" src={img.src} alt={img.alt} style={{ width: "100%" }} />
+              <div key={idx}>
+                <img
+                  className="max-h-[500px] object-cover rounded-xl"
+                  src={img.src}
+                  alt={img.alt}
+                  style={{ width: "100%" }}
+                />
               </div>
             ))}
           </Slider>
         </div>
-      </div>
+      </GeneralContainer>
     </div>
   );
 }
