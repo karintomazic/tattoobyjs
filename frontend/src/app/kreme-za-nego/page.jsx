@@ -3,6 +3,7 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import usePocketBase from "@/hooks/usePocketBase";
+import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
 
@@ -45,7 +46,7 @@ export default function Kreme() {
             </div>
             <img
               alt="Product screenshot"
-              src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
+              src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
               width={2432}
               height={1442}
               className="w-[48rem] max-w-none rounded-xl shadow-xl max-h-[400px] object-cover"

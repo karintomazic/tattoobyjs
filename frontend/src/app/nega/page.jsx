@@ -3,6 +3,7 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import usePocketBase from "@/hooks/usePocketBase";
+import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
 
@@ -33,7 +34,7 @@ export default function Nega() {
               </div>
               <figure className="mt-12">
                 <img
-                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
+                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
                   alt="Hero Image"
                   className="aspect-video rounded-xl bg-gray-50 object-cover max-h-[500px] w-full"
                 />
@@ -48,7 +49,7 @@ export default function Nega() {
               </div>
               <figure>
                 <img
-                  src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
+                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
                   alt="Hero Image"
                   className="aspect-video rounded-xl bg-gray-50 object-cover max-h-[500px] w-full"
                 />

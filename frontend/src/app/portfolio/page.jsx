@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import dynamic from "next/dynamic";
 import usePocketBase from "@/hooks/usePocketBase";
+import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
 
@@ -50,7 +51,7 @@ export default function Portfolio() {
             {items.map((item, index) => (
               <img
                 key={index}
-                src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
+                src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
                 alt={`Tattoo ${index + 1}`}
                 className="w-full rounded-lg shadow-md"
               />

@@ -3,6 +3,7 @@
 import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
+import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 
 export default function DarilniBoni() {
   const items = usePocketBase("darilni_boni");
@@ -62,7 +63,7 @@ export default function DarilniBoni() {
             <div className="relative mt-16 h-80 lg:mt-8">
               <img
                 alt="App screenshot"
-                src={`http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
+                src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
                 width={1824}
                 height={1080}
                 className="absolute left-0 top-0 h-[30rem] w-full lg:w-[40rem] object-cover max-w-none rounded-md bg-white/5 ring-1 ring-white/10"

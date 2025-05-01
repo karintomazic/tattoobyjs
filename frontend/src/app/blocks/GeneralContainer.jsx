@@ -1,6 +1,6 @@
 export default function GeneralContainer({ children, className = "" }) {
   return (
-    <div className={`py-20 lg:py-32 mx-auto px-8 max-w-7xl ${className}`}>
+    <div className={`py-20 lg:py-24 mx-auto px-8 max-w-7xl ${className}`}>
       {children}
     </div>
   );

@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
+import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 
 const settings = {
   dots: true,
@@ -22,7 +23,7 @@ export default function Merch() {
   const items2 = usePocketBase("merch_images");
 
   const sliderImages = items2.map((item) => ({
-    src: `http://localhost:${process.env.NEXT_PUBLIC_PB_LOCAL_PORT}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`,
+    src: `${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`,
     alt: item.alt || item.description || "Merch image",
   }));
 
