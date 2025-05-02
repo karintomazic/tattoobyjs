@@ -16,7 +16,7 @@ export default function AboutMe() {
               <p className="text-base/7 font-semibold text-[#FF6F61]">
                 {item.subtitle}
               </p>
-              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+              <h1 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                 {item.title}
               </h1>
               <p className="mt-6 text-balance text-xl/8 text-gray-700">

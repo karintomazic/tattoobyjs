@@ -22,16 +22,16 @@ export default function DodatniNapotki() {
                     <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
                       {item.subtitle}
                     </p>
-                    <h2 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    <h2 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                       {item.title}
                     </h2>
                     <p className="mt-6 text-xl/8 text-gray-700">{item.text}</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-8 lg:mt-0 lg:sticky lg:top-[80px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden h-full">
+              <div className="mt-12 mb-6 lg:mt-0 lg:sticky lg:top-[80px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden h-full">
                 <img
-                  className="w-full max-w-none rounded-xl bg-gray-900 shadow-lg ring-1 ring-gray-400/10 h-full object-cover"
+                  className="w-full max-h-[80vh] lg:max-h-none max-w-none rounded-xl bg-gray-900 shadow-lg ring-1 ring-gray-400/10 h-full object-cover"
                   src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
                   alt="Hero Image"
                 ></img>

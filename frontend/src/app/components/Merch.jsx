@@ -37,7 +37,7 @@ export default function Merch() {
                 <h2 className="text-base/7 font-semibold text-[#FF6F61]">
                   {item.subtitle}
                 </h2>
-                <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                <p className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                   {item.title}
                 </p>
 

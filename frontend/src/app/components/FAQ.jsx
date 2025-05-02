@@ -18,7 +18,7 @@ export default function FAQ() {
           <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
             kaj moramo vedeti pred tetoviranjem?
           </p>
-          <h2 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          <h2 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
             Pogosta vprašanja
           </h2>
 

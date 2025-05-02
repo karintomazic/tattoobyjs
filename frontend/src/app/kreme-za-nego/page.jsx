@@ -14,9 +14,9 @@ export default function Kreme() {
     <>
       <Navigation />
 
-      <GeneralContainer>
+      <GeneralContainer className="overflow-hidden">
         <div className="max-w-4xl">
-          <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
             Kreme za nego
           </h1>
           <p className="mt-6 text-balance text-xl/8 text-gray-700">
