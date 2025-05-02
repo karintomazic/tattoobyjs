@@ -20,12 +20,12 @@ export default function Kreme() {
             Kreme za nego
           </h1>
           <p className="mt-6 text-balance text-xl/8 text-gray-700">
-            Kreme za nego
+
           </p>
         </div>
 
         {items.map((item) => (
-          <div key={item.id} className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 pt-16">
+          <div key={item.id} className="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 pt-16">
             <div className="lg:pr-8 lg:pt-4">
               <div className="lg:max-w-lg">
                 <h2 className="text-base/7 font-semibold text-[#FF6F61]">

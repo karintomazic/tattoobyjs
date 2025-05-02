@@ -30,7 +30,7 @@ export default function Merch() {
   return (
     <div id="merch">
       <GeneralContainer>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none items-center">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none items-center">
           {items.map((item) => (
             <div key={item.id} className="lg:pr-4 lg:pt-4">
               <div>
@@ -60,7 +60,7 @@ export default function Merch() {
             {sliderImages.map((img, idx) => (
               <div key={idx}>
                 <img
-                  className="h-[800px] object-cover rounded-xl"
+                  className="h-[800px] rounded-xl max-h-[80vh] object-cover"
                   src={img.src}
                   alt={img.alt}
                   style={{ width: "100%" }}

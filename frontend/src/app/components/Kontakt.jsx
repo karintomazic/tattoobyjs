@@ -10,7 +10,7 @@ import GeneralContainer from "../blocks/GeneralContainer";
 
 function ContactCard({ title, icon, children, href }) {
   const CardContent = (
-    <div className="rounded-2xl bg-gray-50 p-10 transition-transform duration-200 hover:scale-101 hover:shadow-lg cursor-pointer h-full">
+    <div className="rounded-2xl bg-gray-100 p-10 transition-transform duration-200 hover:scale-101 hover:shadow-lg cursor-pointer h-full">
       <h3 className="flex items-center gap-4 text-2xl font-semibold text-gray-900">
         {icon && <span className="text-xl text-[#FF6F61]">{icon}</span>}
         {title}
@@ -37,7 +37,7 @@ export default function Kontakt() {
   return (
     <section id="kontakt">
       <GeneralContainer>
-        <div className="mx-auto max-w-2xl lg:max-w-none">
+        <div className="mx-auto max-w-4xl lg:max-w-none">
           <h2 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl mb-4">
             Kontakt
           </h2>

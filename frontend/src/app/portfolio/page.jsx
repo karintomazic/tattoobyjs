@@ -25,7 +25,7 @@ export default function Portfolio() {
   return (
     <div>
       <Navigation />
-      <GeneralContainer className="mx-auto max-w-7xl px-6 lg:px-8 mt-8">
+      <GeneralContainer>
         {itemsText.map((item, index) => (
           <div key={index} className="mb-12">
             <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">

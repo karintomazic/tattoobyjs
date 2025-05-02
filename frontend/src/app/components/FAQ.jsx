@@ -14,7 +14,7 @@ export default function FAQ() {
   return (
     <div id="pogosta-vprasanja">
       <GeneralContainer>
-        <div className="mx-auto max-w-2xl lg:max-w-none">
+        <div className="mx-auto max-w-4xl lg:max-w-none">
           <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
             kaj moramo vedeti pred tetoviranjem?
           </p>
@@ -24,7 +24,7 @@ export default function FAQ() {
 
           <dl className="mt-16 divide-y divide-gray-900/10 grid lg:grid-cols-2 gap-y-0 gap-x-12">
             {faqs.map((faq, index) => (
-              <div key={faq.id} className="py-2 first:pt-0 last:pb-0 mt-2">
+              <div key={faq.id} className="py-2 first:pt-0 last:pb-0 mt-4">
                 <dt>
                   <button
                     type="button"

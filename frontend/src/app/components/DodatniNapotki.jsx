@@ -15,7 +15,7 @@ export default function DodatniNapotki() {
       <GeneralContainer>
         {items.map((item) => (
           <div key={item.id}>
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-0 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
+            <div className="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-0 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
               <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                 <div className="lg:pr-4">
                   <div className="lg:max-w-lg">
@@ -29,18 +29,18 @@ export default function DodatniNapotki() {
                   </div>
                 </div>
               </div>
-              <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-[110px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+              <div className="mt-8 lg:mt-0 lg:sticky lg:top-[80px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden h-full">
                 <img
-                  className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-lg ring-1 ring-gray-400/10 lg:w-[37rem]"
+                  className="w-full max-w-none rounded-xl bg-gray-900 shadow-lg ring-1 ring-gray-400/10 h-full object-cover"
                   src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
                   alt="Hero Image"
                 ></img>
               </div>
               <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                 <div className="lg:pr-4">
-                  <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
+                  <div className="text-base/7 text-gray-700 lg:max-w-lg">
                     <div
-                      className="e-rte-content mt-8 max-w-xl space-y-8 text-gray-600"
+                      className="e-rte-content mt-8 space-y-8 text-gray-600"
                       dangerouslySetInnerHTML={{
                         __html: preprocessRichText(item.content, svgIcon),
                       }}

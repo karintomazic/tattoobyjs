@@ -36,7 +36,7 @@ export default function Nega() {
                 <img
                   src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
                   alt="Hero Image"
-                  className="aspect-video rounded-xl bg-gray-50 object-cover max-h-[500px] w-full"
+                  className="aspect-video rounded-xl bg-gray-100 object-cover max-h-[500px] w-full"
                 />
               </figure>
               <div className="mt-10 ">
@@ -51,7 +51,7 @@ export default function Nega() {
                 <img
                   src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
                   alt="Hero Image"
-                  className="aspect-video rounded-xl bg-gray-50 object-cover max-h-[500px] w-full"
+                  className="aspect-video rounded-xl bg-gray-100 object-cover max-h-[500px] w-full"
                 />
               </figure>
               <div className="mt-16 ">

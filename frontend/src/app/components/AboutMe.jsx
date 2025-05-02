@@ -11,7 +11,7 @@ export default function AboutMe() {
     <div id="o-meni">
       <GeneralContainer>
         {items.map((item) => (
-          <div key={item.id} className="mx-auto max-w-2xl lg:max-w-none">
+          <div key={item.id} className="mx-auto max-w-4xl lg:max-w-none">
             <div className="max-w-4xl">
               <p className="text-base/7 font-semibold text-[#FF6F61]">
                 {item.subtitle}
@@ -39,16 +39,16 @@ export default function AboutMe() {
                   }}
                 />
               </div>
-              <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-                <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-2 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
-                  <div className="aspect-[7/9] overflow-hidden rounded-xl shadow-xl outline -outline-offset-1 outline-black/10">
+              <div className="pt-16 lg:row-span-2 xl:mr-auto">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mx-0 lg:gap-4 xl:gap-8">
+                  <div className="aspect-square lg:aspect-[7/9] overflow-hidden rounded-xl shadow-xl outline -outline-offset-1 outline-black/10">
                     <img
                       alt=""
                       src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img3}?thumb=1080x0`}
                       className="block size-full object-cover"
                     />
                   </div>
-                  <div className="-mt-8 aspect-[7/9] overflow-hidden rounded-xl shadow-xl outline -outline-offset-1 outline-black/10 lg:-mt-40">
+                  <div className="aspect-square lg:aspect-[7/9] overflow-hidden rounded-xl shadow-xl outline -outline-offset-1 outline-black/10 lg:-mt-40">
                     <img
                       alt=""
                       src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
