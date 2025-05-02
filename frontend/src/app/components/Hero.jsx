@@ -210,11 +210,10 @@ export default function Hero() {
                     <div className="relative rounded-full px-3 py-1 text-sm md:text-base text-white ring-1 ring-white hover:ring-white">
                       Kontaktiraj me ali si zagotovi svoj termin{" "}
                       <a
-                        href="#"
+                        href="#kontakt"
                         className="whitespace-nowrap font-semibold text-[#FF6F61]"
                       >
                         <span aria-hidden="true" className="absolute inset-0" />
-                        Kontakt <span aria-hidden="true">&rarr;</span>
                       </a>
                     </div>
                   </div>
@@ -227,7 +226,7 @@ export default function Hero() {
                   <div className="my-10 flex items-center justify-center gap-x-6">
                     <a
                       href="/portfolio"
-                      className="rounded-md bg-[#FF6F61] px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-[#FF6F61] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#FF6F61]"
+                      className="rounded-md py-3 px-8 bg-[#FF6F61] text-md font-semibold text-white shadow-sm hover:bg-[#FF6F61] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#FF6F61]"
                     >
                       Portfolio
                     </a>

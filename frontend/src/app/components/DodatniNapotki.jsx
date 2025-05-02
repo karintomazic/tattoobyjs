@@ -29,7 +29,7 @@ export default function DodatniNapotki() {
                   </div>
                 </div>
               </div>
-              <div className="mt-12 mb-6 lg:mt-0 lg:sticky lg:top-[80px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden h-full">
+              <div className="mt-12 mb-6 lg:mt-0 lg:sticky lg:top-[80px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden h-auto lg:h-full">
                 <img
                   className="w-full max-h-[80vh] lg:max-h-none max-w-none rounded-xl bg-gray-900 shadow-lg ring-1 ring-gray-400/10 h-full object-cover"
                   src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
