@@ -20,7 +20,7 @@ const navLinks2 = [
 
 function DesktopNav() {
   return (
-    <div className="hidden lg:flex lg:gap-x-6">
+    <div className="hidden lg:flex gap-4 xl:gap-x-6 items-center">
       {navLinks.map((link) => (
         <a
           key={link.href}
