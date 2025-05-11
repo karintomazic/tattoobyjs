@@ -3,6 +3,7 @@ import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
 import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
+import MainHeading from "../blocks/MainHeading";
 
 export default function DodatniNapotki() {
   const items = usePocketBase("dodatni_napotki");
@@ -22,9 +23,7 @@ export default function DodatniNapotki() {
                     <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
                       {item.subtitle}
                     </p>
-                    <h2 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                      {item.title}
-                    </h2>
+                    <MainHeading>{item.title}</MainHeading>
                     <p className="mt-6 text-xl/8 text-gray-700">{item.text}</p>
                   </div>
                 </div>

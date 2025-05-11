@@ -6,6 +6,7 @@ import usePocketBase from "@/hooks/usePocketBase";
 import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
+import MainHeading from "../blocks/MainHeading";
 
 export default function Nega() {
   const items = usePocketBase("nega");
@@ -20,9 +21,7 @@ export default function Nega() {
               <p className="font-semibold text-[#FF6F61] mb-[0.8rem]">
                 {item.subtitle}
               </p>
-              <h1 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                {item.title}
-              </h1>
+              <MainHeading>{item.title}</MainHeading>
               <p className="mt-6 text-xl/8">{item.text1}</p>
               <div className="mt-10 ">
                 <div
@@ -34,7 +33,9 @@ export default function Nega() {
               </div>
               <figure className="mt-12">
                 <img
-                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img1}?thumb=1080x0`}
+                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${
+                    item.id
+                  }/${item.img1}?thumb=1080x0`}
                   alt="Hero Image"
                   className="aspect-video rounded-xl bg-gray-100 object-cover max-h-[500px] w-full"
                 />
@@ -49,7 +50,9 @@ export default function Nega() {
               </div>
               <figure>
                 <img
-                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
+                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${
+                    item.id
+                  }/${item.img2}?thumb=1080x0`}
                   alt="Hero Image"
                   className="aspect-video rounded-xl bg-gray-100 object-cover max-h-[500px] w-full"
                 />

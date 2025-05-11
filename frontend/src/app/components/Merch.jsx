@@ -7,6 +7,7 @@ import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
 import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
+import MainHeading from "../blocks/MainHeading";
 
 const settings = {
   dots: true,
@@ -23,7 +24,9 @@ export default function Merch() {
   const items2 = usePocketBase("merch_images");
 
   const sliderImages = items2.map((item) => ({
-    src: `${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`,
+    src: `${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${
+      item.img
+    }?thumb=1080x0`,
     alt: item.alt || item.description || "Merch image",
   }));
 
@@ -34,13 +37,10 @@ export default function Merch() {
           {items.map((item) => (
             <div key={item.id} className="lg:pr-4 lg:pt-4">
               <div>
-                <h2 className="text-base/7 font-semibold text-[#FF6F61]">
+                <h3 className="text-base/7 font-semibold text-[#FF6F61]">
                   {item.subtitle}
-                </h2>
-                <p className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  {item.title}
-                </p>
-
+                </h3>
+                <MainHeading>{item.title}</MainHeading>
                 <p className="mt-6 text-balance text-xl/8 text-gray-700">
                   {item.text}
                 </p>

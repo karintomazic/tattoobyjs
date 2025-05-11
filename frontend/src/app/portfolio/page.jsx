@@ -7,6 +7,7 @@ import usePocketBase from "@/hooks/usePocketBase";
 import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
+import MainHeading from "../blocks/MainHeading";
 
 const ResponsiveMasonry = dynamic(
   () => import("react-responsive-masonry").then((mod) => mod.ResponsiveMasonry),
@@ -31,9 +32,7 @@ export default function Portfolio() {
             <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
               {item.subtitle}
             </p>
-            <h2 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-              {item.title}
-            </h2>
+            <MainHeading>{item.title}</MainHeading>
             <p className="mt-6 text-xl/8 text-gray-700"> {item.text}</p>
             <div
               className="mt-6 text-base/7 text-gray-600"
@@ -51,7 +50,9 @@ export default function Portfolio() {
             {items.map((item, index) => (
               <img
                 key={index}
-                src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
+                src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${
+                  item.id
+                }/${item.img}?thumb=1080x0`}
                 alt={`Tattoo ${index + 1}`}
                 className="w-full rounded-lg shadow-md"
               />

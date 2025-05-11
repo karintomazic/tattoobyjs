@@ -2,6 +2,7 @@
 import { useState } from "react";
 import usePocketBase from "@/hooks/usePocketBase";
 import GeneralContainer from "../blocks/GeneralContainer";
+import MainHeading from "../blocks/MainHeading";
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -18,10 +19,7 @@ export default function FAQ() {
           <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
             kaj moramo vedeti pred tetoviranjem?
           </p>
-          <h2 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            Pogosta vprašanja
-          </h2>
-
+          <MainHeading>Pogosta vprašanja</MainHeading>
           <dl className="mt-16 divide-y divide-gray-900/10 grid lg:grid-cols-2 gap-y-0 gap-x-12">
             {faqs.map((faq, index) => (
               <div key={faq.id} className="py-2 first:pt-0 last:pb-0 mt-4">

@@ -7,6 +7,7 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import GeneralContainer from "../blocks/GeneralContainer";
+import MainHeading from "../blocks/MainHeading";
 
 function ContactCard({ title, icon, children, href }) {
   const CardContent = (
@@ -38,9 +39,7 @@ export default function Kontakt() {
     <section id="kontakt">
       <GeneralContainer>
         <div className="mx-auto max-w-4xl lg:max-w-none">
-          <h2 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            Kontakt
-          </h2>
+          <MainHeading>Kontakt</MainHeading>
           <div className="divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-10 pb-16 pt-4 lg:grid-cols-3">
               <ContactCard

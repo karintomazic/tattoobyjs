@@ -3,6 +3,7 @@ import usePocketBase from "@/hooks/usePocketBase";
 import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
 import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
+import MainHeading from "../blocks/MainHeading";
 
 export default function Nasveti() {
   const items = usePocketBase("nasveti");
@@ -18,7 +19,9 @@ export default function Nasveti() {
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 p-64 pb-[16rem] lg:pb-[35rem] shadow-lg ">
                 <img
                   className="absolute inset-0 size-full object-cover brightness-125 saturate-0"
-                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
+                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${
+                    item.id
+                  }/${item.img}?thumb=1080x0`}
                   alt="Hero Image"
                 ></img>
               </div>
@@ -28,9 +31,7 @@ export default function Nasveti() {
                 <p className="text-base/7 font-semibold text-[#FF6F61] mb-[0.8rem]">
                   {item.subtitle}
                 </p>
-                <h2 className="mt-2 mb-12 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  {item.title}
-                </h2>
+                <MainHeading>{item.title}</MainHeading>
                 <div
                   className="e-rte-content mt-8 space-y-8 text-gray-600"
                   dangerouslySetInnerHTML={{
