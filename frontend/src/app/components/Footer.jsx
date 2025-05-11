@@ -3,6 +3,22 @@ export default function Footer() {
     <footer>
       <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center gap-x-6 md:order-2">
+        <a
+            href="/soglasje-starsev-za-mladoletne-osebe.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-center text-sm/6 text-gray-600 md:mt-0"
+          >
+            Soglasje staršev
+          </a>
+          <a
+            href="/splosni-pogoji-tetoviranja.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-center text-sm/6 text-gray-600 md:mt-0"
+          >
+            Splošni pogoji
+          </a>
           <a href="https://www.facebook.com/p/Tattoo-Studio-by-JS-61552365441517/" target="_blank" className="text-gray-600 hover:text-gray-800">
             <span className="sr-only">Facebook</span>
             <svg

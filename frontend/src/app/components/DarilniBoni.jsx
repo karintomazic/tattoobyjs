@@ -14,7 +14,7 @@ export default function DarilniBoni() {
         {items.map((item) => (
           <div
             key={item.id}
-            className="relative isolate overflow-hidden bg-stone-950 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
+            className="relative isolate overflow-hidden bg-stone-950 px-6 pt-16 shadow-2xl rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
           >
             <svg
               viewBox="0 0 1024 1024"
@@ -45,7 +45,7 @@ export default function DarilniBoni() {
                   __html: preprocessRichText(item.content, svgIcon),
                 }}
               />
-              <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+              <div className="mt-10 flex flex-col md:flex-row gap-6 items-center justify-center gap-x-6 lg:justify-start">
                 <a
                   href="#kontakt"
                   className="rounded-md bg-white py-3 px-8 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"

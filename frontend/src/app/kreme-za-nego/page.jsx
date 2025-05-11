@@ -50,7 +50,7 @@ export default function Kreme() {
               }/${item.img}?thumb=1080x0`}
               width={2432}
               height={1442}
-              className="w-[48rem] max-w-none rounded-xl shadow-xl max-h-[400px] object-cover"
+              className="rounded-xl shadow-xl max-h-[400px] object-cover"
             />
           </div>
         ))}
@@ -59,3 +59,5 @@ export default function Kreme() {
     </>
   );
 }
+
+// rounded-xl shadow-xl max-h-[400px] object-cover
