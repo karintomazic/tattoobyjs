@@ -17,7 +17,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-center text-sm/6 text-gray-600 md:mt-0"
           >
-            Splošni pogoji
+            Splošni pogoji tetoviranja
           </a>
           <a href="https://www.facebook.com/p/Tattoo-Studio-by-JS-61552365441517/" target="_blank" className="text-gray-600 hover:text-gray-800">
             <span className="sr-only">Facebook</span>

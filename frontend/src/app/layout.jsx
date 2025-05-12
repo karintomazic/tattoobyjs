@@ -16,9 +16,9 @@ export const metadata = {
   icons: {
     icon: "/logo.svg",
     shortcut: "/logo.svg",
-    apple: "/apple-touch-icon.png",
+    apple: "/logo.svg",
   },
-  description: "Tattoo studio by JS",
+  description: "Jernej Sirc s.p.",
 };
 
 export default function RootLayout({ children }) {
