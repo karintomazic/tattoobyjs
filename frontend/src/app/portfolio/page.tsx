@@ -4,8 +4,8 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import dynamic from "next/dynamic";
 import usePocketBase from "@/hooks/usePocketBase";
-import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
-import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import { fileUrl } from "@/lib/pocketbase";
+import { preprocessRichText } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
 import MainHeading from "../blocks/MainHeading";
 
@@ -20,7 +20,8 @@ const Masonry = dynamic(
 );
 
 export default function Portfolio() {
-  const items = usePocketBase("portfolio");
+  // Skip entries without an uploaded image, so no broken images show
+  const items = usePocketBase("portfolio").filter((item) => item.img);
   const itemsText = usePocketBase("portfolio_text");
 
   return (
@@ -37,7 +38,7 @@ export default function Portfolio() {
             <div
               className="mt-6 text-base/7 text-gray-600"
               dangerouslySetInnerHTML={{
-                __html: preprocessRichText(item.content, svgIcon),
+                __html: preprocessRichText(item.content),
               }}
             />
           </div>
@@ -50,9 +51,7 @@ export default function Portfolio() {
             {items.map((item, index) => (
               <img
                 key={index}
-                src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${
-                  item.id
-                }/${item.img}?thumb=1080x0`}
+                src={fileUrl(item, item.img)}
                 alt={`Tattoo ${index + 1}`}
                 className="w-full rounded-lg shadow-md"
               />

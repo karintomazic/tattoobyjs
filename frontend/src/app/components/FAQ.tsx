@@ -5,10 +5,11 @@ import GeneralContainer from "../blocks/GeneralContainer";
 import MainHeading from "../blocks/MainHeading";
 
 export default function FAQ() {
-  const [activeIndex, setActiveIndex] = useState(null);
+  // Index of the open question, or null when all are closed
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const faqs = usePocketBase("FAQ");
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 

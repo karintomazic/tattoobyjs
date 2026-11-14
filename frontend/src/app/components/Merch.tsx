@@ -4,9 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import usePocketBase from "@/hooks/usePocketBase";
-import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import { fileUrl } from "@/lib/pocketbase";
+import { preprocessRichText } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
-import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import MainHeading from "../blocks/MainHeading";
 
 const settings = {
@@ -23,12 +23,13 @@ export default function Merch() {
   const items = usePocketBase("merch_content");
   const items2 = usePocketBase("merch_images");
 
-  const sliderImages = items2.map((item) => ({
-    src: `${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${
-      item.img
-    }?thumb=1080x0`,
-    alt: item.alt || item.description || "Merch image",
-  }));
+  // Skip entries without an uploaded image, so no broken images show
+  const sliderImages = items2
+    .filter((item) => item.img)
+    .map((item) => ({
+      src: fileUrl(item, item.img),
+      alt: "Merch image",
+    }));
 
   return (
     <div id="merch">
@@ -48,7 +49,7 @@ export default function Merch() {
                 <div
                   className="mt-6 text-lg/8 text-gray-600"
                   dangerouslySetInnerHTML={{
-                    __html: preprocessRichText(item.content, svgIcon),
+                    __html: preprocessRichText(item.content),
                   }}
                 />
 

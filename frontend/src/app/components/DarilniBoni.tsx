@@ -1,9 +1,9 @@
 "use client";
 
 import usePocketBase from "@/hooks/usePocketBase";
-import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import { fileUrl } from "@/lib/pocketbase";
+import { preprocessRichText } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
-import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 
 export default function DarilniBoni() {
   const items = usePocketBase("darilni_boni");
@@ -42,7 +42,7 @@ export default function DarilniBoni() {
               <div
                 className="mt-6 text-pretty text-lg/8 text-gray-300"
                 dangerouslySetInnerHTML={{
-                  __html: preprocessRichText(item.content, svgIcon),
+                  __html: preprocessRichText(item.content),
                 }}
               />
               <div className="mt-10 flex flex-col md:flex-row gap-6 items-center justify-center gap-x-6 lg:justify-start">
@@ -63,7 +63,7 @@ export default function DarilniBoni() {
             <div className="relative mt-16 h-80 lg:mt-8">
               <img
                 alt="App screenshot"
-                src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
+                src={fileUrl(item, item.img)}
                 width={1824}
                 height={1080}
                 className="absolute left-0 top-0 h-[30rem] w-full lg:w-[40rem] object-cover max-w-none rounded-md bg-white/5 ring-1 ring-white/10"

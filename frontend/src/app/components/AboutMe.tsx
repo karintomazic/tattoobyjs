@@ -1,8 +1,8 @@
 "use client";
 import usePocketBase from "@/hooks/usePocketBase";
-import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import { fileUrl } from "@/lib/pocketbase";
+import { preprocessRichText } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
-import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import MainHeading from "../blocks/MainHeading";
 
 export default function AboutMe() {
@@ -27,14 +27,14 @@ export default function AboutMe() {
                 <div
                   className="mt-6 text-base/7 text-gray-600"
                   dangerouslySetInnerHTML={{
-                    __html: preprocessRichText(item.content, svgIcon),
+                    __html: preprocessRichText(item.content),
                   }}
                 />
 
                 <div
                   className="mt-8 text-base/7 text-gray-600"
                   dangerouslySetInnerHTML={{
-                    __html: preprocessRichText(item.content2, svgIcon),
+                    __html: preprocessRichText(item.content2),
                   }}
                 />
               </div>
@@ -43,14 +43,14 @@ export default function AboutMe() {
                   <div className="aspect-square lg:aspect-[7/9] overflow-hidden rounded-xl shadow-xl outline -outline-offset-1 outline-black/10">
                     <img
                       alt=""
-                      src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img3}?thumb=1080x0`}
+                      src={fileUrl(item, item.img3)}
                       className="block size-full object-cover"
                     />
                   </div>
                   <div className="aspect-square lg:aspect-[7/9] overflow-hidden rounded-xl shadow-xl outline -outline-offset-1 outline-black/10 lg:-mt-40">
                     <img
                       alt=""
-                      src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img2}?thumb=1080x0`}
+                      src={fileUrl(item, item.img2)}
                       className="block size-full object-cover"
                     />
                   </div>
@@ -66,7 +66,7 @@ export default function AboutMe() {
                 <div
                   className="mt-8 text-base/7 text-gray-600"
                   dangerouslySetInnerHTML={{
-                    __html: preprocessRichText(item.content3, svgIcon),
+                    __html: preprocessRichText(item.content3),
                   }}
                 />
               </div>

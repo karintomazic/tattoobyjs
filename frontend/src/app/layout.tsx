@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -11,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Tattoo studio by JS",
   icons: {
     icon: "/logo.svg",
@@ -21,11 +23,11 @@ export const metadata = {
   description: "Jernej Sirc s.p.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="sl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiase pt-[160px] scroll-smooth`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-[160px] scroll-smooth`}
       >
         {children}
       </body>

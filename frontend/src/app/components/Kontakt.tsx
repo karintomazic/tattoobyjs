@@ -6,10 +6,19 @@ import {
   faEnvelope,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import type { ReactNode } from "react";
 import GeneralContainer from "../blocks/GeneralContainer";
 import MainHeading from "../blocks/MainHeading";
 
-function ContactCard({ title, icon, children, href }) {
+interface ContactCardProps {
+  title: string;
+  icon?: ReactNode;
+  children: ReactNode;
+  /** Optional: without a link, the card is not clickable */
+  href?: string;
+}
+
+function ContactCard({ title, icon, children, href }: ContactCardProps) {
   const CardContent = (
     <div className="rounded-2xl bg-gray-100 p-10 transition-transform duration-200 hover:scale-101 hover:shadow-lg cursor-pointer h-full">
       <h3 className="flex items-center gap-4 text-2xl font-semibold text-gray-900">

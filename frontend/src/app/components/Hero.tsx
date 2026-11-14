@@ -1,6 +1,6 @@
 "use client";
 import usePocketBase from "@/hooks/usePocketBase";
-import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
+import { fileUrl } from "@/lib/pocketbase";
 
 import { Merriweather } from "next/font/google";
 const merriweather = Merriweather({
@@ -19,9 +19,7 @@ export default function Hero() {
         >
           {/* Background image */}
           <img
-            src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${
-              item.id
-            }/${item.hero_image}?thumb=2048x0`}
+            src={fileUrl(item, item.hero_image, "2048x0")}
             alt="Hero Image"
             className="absolute inset-0 -z-20 size-full object-cover sm:rounded-3xl"
           />

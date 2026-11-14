@@ -3,8 +3,8 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import usePocketBase from "@/hooks/usePocketBase";
-import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
-import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import { fileUrl } from "@/lib/pocketbase";
+import { preprocessRichText } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
 import MainHeading from "../blocks/MainHeading";
 
@@ -38,16 +38,14 @@ export default function Kreme() {
                 <div
                   className="mt-6 text-lg/8 text-gray-600"
                   dangerouslySetInnerHTML={{
-                    __html: preprocessRichText(item.content, svgIcon),
+                    __html: preprocessRichText(item.content),
                   }}
                 />
               </div>
             </div>
             <img
               alt="Product screenshot"
-              src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${
-                item.id
-              }/${item.img}?thumb=1080x0`}
+              src={fileUrl(item, item.img)}
               width={2432}
               height={1442}
               className="rounded-xl shadow-xl max-h-[400px] object-cover"

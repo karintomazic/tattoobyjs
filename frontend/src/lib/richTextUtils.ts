@@ -13,7 +13,9 @@ export const svgIcon = `
   </svg>
 `;
 
-export function preprocessRichText(content) {
+/** Adds a check icon in front of every list item in PocketBase rich text. */
+export function preprocessRichText(content: string | undefined): string {
+  if (!content) return "";
   return content
     .replace(/<li>/g, `<li class="flex gap-x-3">${svgIcon}<span>`)
     .replace(/<\/li>/g, `</span></li>`);

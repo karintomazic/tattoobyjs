@@ -45,7 +45,12 @@ function DesktopNav() {
   );
 }
 
-function MobileNav({ isOpen, toggleMenu }) {
+interface MobileNavProps {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}
+
+function MobileNav({ isOpen, toggleMenu }: MobileNavProps) {
   if (!isOpen) return null;
 
   return (

@@ -1,8 +1,8 @@
 "use client";
 import usePocketBase from "@/hooks/usePocketBase";
-import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import { fileUrl } from "@/lib/pocketbase";
+import { preprocessRichText } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
-import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import MainHeading from "../blocks/MainHeading";
 
 export default function DodatniNapotki() {
@@ -31,7 +31,7 @@ export default function DodatniNapotki() {
               <div className="mt-12 mb-6 lg:mt-0 lg:sticky lg:top-[80px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden h-auto lg:h-full">
                 <img
                   className="w-full max-h-[80vh] lg:max-h-none max-w-none rounded-xl bg-gray-900 shadow-lg ring-1 ring-gray-400/10 h-full object-cover"
-                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${item.id}/${item.img}?thumb=1080x0`}
+                  src={fileUrl(item, item.img)}
                   alt="Hero Image"
                 ></img>
               </div>
@@ -41,7 +41,7 @@ export default function DodatniNapotki() {
                     <div
                       className="e-rte-content mt-8 space-y-8 text-gray-600"
                       dangerouslySetInnerHTML={{
-                        __html: preprocessRichText(item.content, svgIcon),
+                        __html: preprocessRichText(item.content),
                       }}
                     />
                   </div>

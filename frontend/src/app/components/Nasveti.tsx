@@ -1,8 +1,8 @@
 "use client";
 import usePocketBase from "@/hooks/usePocketBase";
-import { preprocessRichText, svgIcon } from "@/lib/richTextUtils";
+import { fileUrl } from "@/lib/pocketbase";
+import { preprocessRichText } from "@/lib/richTextUtils";
 import GeneralContainer from "../blocks/GeneralContainer";
-import usePocketBaseUrl from "@/hooks/usePocketBaseUrl";
 import MainHeading from "../blocks/MainHeading";
 
 export default function Nasveti() {
@@ -19,9 +19,7 @@ export default function Nasveti() {
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 p-64 pb-[16rem] lg:pb-[35rem] shadow-lg ">
                 <img
                   className="absolute inset-0 size-full object-cover brightness-125 saturate-0"
-                  src={`${usePocketBaseUrl()}/api/files/${item.collectionId}/${
-                    item.id
-                  }/${item.img}?thumb=1080x0`}
+                  src={fileUrl(item, item.img)}
                   alt="Hero Image"
                 ></img>
               </div>
@@ -35,7 +33,7 @@ export default function Nasveti() {
                 <div
                   className="e-rte-content mt-8 space-y-8 text-gray-600"
                   dangerouslySetInnerHTML={{
-                    __html: preprocessRichText(item.content, svgIcon),
+                    __html: preprocessRichText(item.content),
                   }}
                 />
               </div>
